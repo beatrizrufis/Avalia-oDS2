@@ -1,0 +1,35 @@
+﻿@model ProjetoAgoraVai.Models.Jogador
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes de Jogador</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nacionalidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nacionalidade)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.JogadorId">Editar Cadastro de Jogador</a> |
+    <a asp-action="Index">Voltar</a>
+</div>
